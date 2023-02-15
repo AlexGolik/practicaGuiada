@@ -1,0 +1,223 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    font-family: 'Josefin Sans', sans-serif;
+    background-attachment: fixed;
+}
+
+.header{
+
+    background: #f25757;
+    background: linear-gradient(212deg, rgba(242,87,87,1) 0%, #f2db63 26%, #f22e76 90%, #f2b366 100%);
+    width: 100vw;
+    height: calc(100vh-200px);
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.header > img{
+
+    width: 50%;
+    height: 180px;
+    margin-top: 5%;
+}
+
+.ola{
+
+    position: absolute;
+    bottom: 0; 
+    width: 100vw;
+
+}
+
+.form{
+
+    width: 50%;
+    height: auto;
+    margin: 5% auto;    
+    border-radius: 15px;
+    border: 4px solid wheat;
+    padding: 25px 10px ;
+    text-align: center;
+    
+}
+
+.form > input, label, button, select{
+
+    display: inline-block;
+    width: 70%;
+    margin: 3% 0%;
+    font-size: 20px;
+    
+}
+
+.form > input{
+
+    padding: 10px 2px;
+    border: none;
+    border-bottom: 1px solid #f25757;
+    outline: none;
+
+}
+.form > label{
+
+    text-align: left;
+    padding: 5px;
+
+}
+
+.control-s{
+    margin-top: 2%;
+    border: 2px solid #f25757;
+    padding: 10px;
+
+}
+
+.btn{
+
+    background:wheat;
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover{
+
+    background-color: yellow;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    text-decoration: none;
+
+}
+
+.card{
+
+    width: 50%;
+    margin: 5% auto;
+    border: 3px solid #f25757;
+    text-align: center;
+
+}
+
+.title-card{
+
+    padding: 3%;
+
+}
+
+.card .text-promedio{
+
+    font-size: 20px;
+    color: wheat;
+
+}
+
+.card .text-aprobado{
+
+    font-size: 24px;
+    padding: 2% 0;
+
+}
+
+.card .btnRegistrar{
+    background: #f2db63;
+    background:linear-gradient(top, #f2db63, #f2b366);
+    background: linear-gradient(to bottom, #f2db63, #f2b366);
+    border-radius: 24px;
+    padding: 2%;
+    border: 1px solid #f25757;
+}
+
+.alerta{
+
+    width: 25%;
+    height: 10%;
+    background-color: #f25757;
+    position:fixed;
+    top: 35%;
+    left: 35%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10%;
+    border: 2px solid #3C3D59;
+
+}
+
+.alerta2{
+    width: 25%;
+    height: 10%;
+    background-color: #69f80a;
+    position:fixed;
+    top: 35%;
+    left: 35%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10%;
+    border: 2px solid #3C3D59;
+
+}
+
+.textAlerta{
+
+    width: 100%;
+    margin-top: 10%;
+    color: #fff;
+
+}
+
+.close{
+    width: 5%;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+@media screen and (max-width: 760px){
+    
+    .form{
+        width: 60%;
+        margin: 2% auto;
+        border: 2px solid blueviolet;
+        padding: 15px 5px;
+        
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .form{
+        width: 70%;
+        margin: 2% auto;
+        border: 2px solid green;
+        padding: 15px 5px;
+        
+    }
+    .form > input, label, button, select{
+
+        margin: 2% 0;
+        font-size: 16px;
+
+    }
+
+    .btn{
+
+        font-size: 16px;
+    }
+}
