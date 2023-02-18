@@ -6,7 +6,6 @@ const students = [];
 const teachers = [];
 
 const paintCard = (typ)=>{
-
     typ = typ.toUpperCase();
     const fragment = document.createDocumentFragment();
     const templateStudent = document.querySelector('#templateStudent').content;
@@ -21,11 +20,18 @@ const paintCard = (typ)=>{
             cloneTemp.querySelector('.text-aprobado').innerHTML = `${checkAvg(i.prom)}`;
             fragment.appendChild(cloneTemp);
         }
-    }else{ 
-
-    }
+    }else if(typ === 'PROFESOR'){
+            for(let i of teachers){
+                const cloneTemp = templateTeach.cloneNode(true);
+                cloneTemp.querySelector('.title-card').innerHTML = "Datos del <i>profesor</i>";
+                cloneTemp.querySelector('.data-card').innerHTML = `NOMBRES Y APELLIDOS: ${i.nomApe.toUpperCase()} PROFESIÓN: ${i.prof.toUpperCase()}`;
+                cloneTemp.querySelector('.text-edad').innerHTML =`EDAD: ${i.age}`;
+                fragment.appendChild(cloneTemp);
+            }
+        }
     cardE.appendChild(fragment);
-}
+    cardP.appendChild(fragment);
+};
 
 const addStudent = (name, lastNme, avg)=>{
     //Objeto literal de JS
@@ -38,6 +44,18 @@ const addStudent = (name, lastNme, avg)=>{
     students.push(student);
     modalArlert2('Se agrego un estudiante');
 }
+const addTeacher = (name, lastNme, avg)=>{
+    //Objeto literal de JS
+    let teacher ={
+        nomApe: name,
+        prof: lastNme,
+        age: avg
+
+    }
+    teachers.push(teacher);
+    modalArlert2('Se agrego un profesor');
+}
+
 const modalArlert = (cad)=>{
     const alerta = document.createElement('div');
     const texto = document.createElement('p');
@@ -74,4 +92,4 @@ const modalArlert2 = (cad)=>{
     }
 }
 
-export {paintCard, addStudent,modalArlert}
+export {paintCard, addStudent,modalArlert, addTeacher,modalArlert2}

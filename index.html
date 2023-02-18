@@ -22,11 +22,11 @@
     
     <form class="form" id="formulario">
         <h2>Registro</h2>
-        <label for="nombre">Nombres:</label>
+        <label id="text1" for="nombre">Nombres:</label>
         <input class="control" id="nombre" name="nombre" placeholder="Ingrese nombre"  type="text" required />
-        <label for="apellido">Apellidos:</label>
+        <label id="text2" for="apellido">Apellidos:</label>
         <input class="control" id="apellido" name="apellido" placeholder="Ingrese apellido" type="text" required/>
-        <label for="promedio">Promedio:</label>
+        <label id="text3" for="promedio">Promedio:</label>
         <input class="control" id="promedio" name="promedio" placeholder="Ingrese su promedio" type="number" required/>
         <select class="control-s" name="opcion" id="opcion">
             <option value="0" selected>Seleccione una opción</option>
@@ -55,14 +55,15 @@
             </div>       
     </template>
 
-    <template id="templateTeach">      
-            <div class="card-body">
-                <h3>nombre</h3>
-                <h6></h6>
-                <p class="lead">Edad</p>
-            </div>       
-    </template>
-
+    <template id="templateTeach">       
+        <div class="card">
+            <h3 class="title-card"></h3>
+            <h4 class="data-card"></h4>
+            <p class="text-aprobado"></p>               
+            <p class="text-edad"></p>
+            <button class="btnRegistrar">Registrar</button>                
+        </div>       
+</template>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
